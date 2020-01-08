@@ -4,6 +4,8 @@
  html, body {
    background-image: url(images/pawel-czerwinski-bX9B9c-YasY-unsplash.jpg);
    background-size: cover;
+   width: 100%;
+   height: 100%;
  }
  
  /*
