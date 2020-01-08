@@ -11,6 +11,12 @@
   h1 {
     font-family: 'Fjalla One', sans-serif;
   }
+  .cover{
+    background-color: white;
+    opacity: 90%;
+    padding: 5rem;
+    margin: 150px 150px 150px 150px;
+    }
  /*
   * Cover
   */
