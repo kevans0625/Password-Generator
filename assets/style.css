@@ -1,22 +1,31 @@
    /*
  * Header
  */
- html, body {
-   background-image: url(images/spikes.png);
-   background-size: cover;
-   width: 100%;
-   height: 100%;
-   font-family: 'Noto Sans JP', sans-serif;
- }
-  h1, h2 {
-    font-family: 'Fjalla One', sans-serif;
-  }
-  .cover{
-    background-color: white;
-    opacity: 90%;
-    padding: 5rem;
-    margin: 150px 150px 150px 150px;
-    }
- /*
+
+   html, body {
+     background-image: url(images/spikes.png);
+     background-size: cover;
+     width: 100%;
+     height: 100%;
+     font-family: 'Noto Sans JP', sans-serif;
+   }
+
+   h1 {
+     font-family: 'Fjalla One', sans-serif;
+     margin: 3rem 0rem 0rem 0rem;
+   }
+
+   /*
   * Cover
   */
+  h2 {
+    font-family: 'Fjalla One', sans-serif;
+  }
+   .cover {
+     background-color: white;
+     opacity: 90%;
+     padding: 5rem;
+     margin: 150px 150px 150px 150px;
+
+   }
+
