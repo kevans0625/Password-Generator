@@ -1,23 +1,28 @@
 window.addEventListener('load', function() {
   var length = +prompt("How many characters would you like your password to be?");
 
-  alert("Please agree to at least one character type ");
-  var upper = confirm("Would you like your passord to include uppercase letters?");
-  var lower = confirm("Would you like your passord to include lowercase letters?");
-  var number = confirm("Would you like your passord to include numbers?");
-  var symbols = confirm("Would you like your passord to include special characters?");
 
-  if (length < 8 || length > 128) {
+  if (length > 8 && length < 128)  {
+    alert("Please agree to at least one of the following character types.");
+    var upper = confirm("Would you like your passord to include uppercase letters?");
+    var lower = confirm("Would you like your passord to include lowercase letters?");
+    var number = confirm("Would you like your passord to include numbers?");
+    var symbols = confirm("Would you like your passord to include special characters?");
+
+  }
+  
+  else if (length < 8 || length > 128) {
     length = prompt("Length must be 8-128 characters. Please enter a character length between 8-128.");
 
-    alert("Please agree to at least one character type ");
+    alert("Please agree to at least one of the following character types.");
     var upper = confirm("Would you like your passord to include uppercase letters?");
     var lower = confirm("Would you like your passord to include lowercase letters?");
     var number = confirm("Would you like your passord to include numbers?");
     var symbols = confirm("Would you like your passord to include special characters?");
   }
 
-  if  ((upper != true || lower != true|| number != true || symbols != true)) {
+
+  if  ((upper != true && lower != true && number != true && symbols != true)) {
     alert("You must select at least one character type!");
 
     upper = confirm("Would you like your passord to include uppercase letters?");
@@ -46,6 +51,7 @@ window.addEventListener('load', function() {
     document.execCommand('copy');
     textarea.remove();
     alert('Password copied to clipboard');
+
   });
 
 
