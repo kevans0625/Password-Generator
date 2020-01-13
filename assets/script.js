@@ -1,9 +1,11 @@
 window.addEventListener('load', function() {
-  var length = +prompt("Please enter a character length between 8-128.");
+  var length = +prompt("How many characters would you like your password to be?");
+
 
   if (length < 8 || length > 128) {
-    length = prompt("Length must be 8-128 characters. How many characters would you like your password to be?");
-    
+    length = prompt("Length must be 8-128 characters. Please enter a character length between 8-128.");
+
+    alert("Please agree to at least one character type ");
     var upper = confirm("Would you like your passord to include uppercase letters?");
     var lower = confirm("Would you like your passord to include lowercase letters?");
     var number = confirm("Would you like your passord to include numbers?");
@@ -18,6 +20,8 @@ window.addEventListener('load', function() {
     number = confirm("Would you like your passord to include numbers?");
     symbols = confirm("Would you like your passord to include special characters?");
   }
+
+
   const resultEl = document.getElementById('password');
 
   document.getElementById('generate').addEventListener('click', () => {
