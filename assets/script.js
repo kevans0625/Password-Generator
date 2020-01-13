@@ -25,7 +25,41 @@ window.addEventListener('load', function() {
     symbols = confirm("Should your password include special characters?");
   } 
   
+  const resultEl = document.getElementById('password');
 
+ 
+
+  const randomFunc = {
+    lower: getRandomLower,
+    upper: getRandomUpper,
+    number: getRandomNumber,
+    symbol: getRandomSymbol
+  };
+function generatePassword(lower, upper, number, symbol, length) {
+  let generatedPassword = '';
+  const typesCount = lower + upper + number + symbol;
+  const typesArr = [{
+    lower
+  }, {
+    upper
+  }, {
+    number
+  }, {
+    symbol
+  }].filter(item => Object.values(item)[0]);
+
+  // create a loop
+  for (let i = 0; i < length; i += typesCount) {
+    typesArr.forEach(type => {
+      const funcName = Object.keys(type)[0];
+      generatedPassword += randomFunc[funcName]();
+    });
+  }
+
+  const finalPassword = generatedPassword.slice(0, length);
+
+  return finalPassword;
+}
 
 function getRandomLower() {
     return String.fromCharCode(Math.floor(Math.random() * 26) + 97);
