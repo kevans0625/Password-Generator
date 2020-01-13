@@ -1,32 +1,53 @@
    /*
  * Header
  */
+ html, body {
+  background-image: url(images/spikes.png);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  font-family: 'Noto Sans JP', sans-serif;
+}
 
-   html, body {
-     background-image: url(images/spikes.png);
-     background-size: cover;
-     width: 100%;
-     height: 100%;
-     font-family: 'Noto Sans JP', sans-serif;
-   }
+h1 {
+  font-family: 'Fjalla One', sans-serif;
+  margin: 3rem 0rem 0rem 0rem;
+}
 
-   h1 {
-     font-family: 'Fjalla One', sans-serif;
-     margin: 3rem 0rem 0rem 0rem;
-   }
+/*
+* Cover
+*/
+.cover {
+  background-color: white;
+  opacity: 90%;
+  padding: 5rem;
+  margin: 100px 150px 150px 150px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  text-align: center;
+}
+h2 {
+ font-family: 'Fjalla One', sans-serif;
+ margin-bottom: 1em;
+}
+.card {
+  border: none;
+}
 
-   /*
-  * Cover
-  */
-  h2 {
-    font-family: 'Fjalla One', sans-serif;
-  }
-   .cover {
-     background-color: white;
-     opacity: 90%;
-     padding: 5rem;
-     margin: 150px 150px 150px 150px;
-     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-     text-align: center;
-   }
-
+.card-body {
+  margin: 1rem;
+  border-style: dashed;
+  border-width: 3.5px;
+  border-radius: 10px;
+  padding-bottom: 5rem;
+  text-align:center; 
+  resize:none; 
+  border: dashed 2px lightgrey; 
+  margin:1rem;
+  padding: 10px auto; 
+  min-height: 100px;
+}
+                
+.btn{
+ margin-top: 1em;
+ border-radius: 25px;
+}
