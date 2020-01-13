@@ -4,19 +4,19 @@ window.addEventListener('load', function() {
   if (length < 8 || length > 128) {
     length = prompt("Length must be 8-128 characters. How many characters would you like your password to be?");
     
-    var upper = confirm("Should your password include uppercase letters?");
-    var lower = confirm("Should your password include lowercase letters?");
-    var number = confirm("Should your password include numbers?");
-    var symbols = confirm("Should your password include special characters?");
+    var upper = confirm("Would you like your passord to include uppercase letters?");
+    var lower = confirm("Would you like your passord to include lowercase letters?");
+    var number = confirm("Would you like your passord to include numbers?");
+    var symbols = confirm("Would you like your passord to include special characters?");
   }
 
   if  ((upper != true || lower != true|| number != true || symbols != true)) {
     alert("You must select at least one character type!");
 
-    upper = confirm("Should your password include uppercase letters?");
-    lower = confirm("Should your password include lowercase letters?");
-    number = confirm("Should your password include numbers?");
-    symbols = confirm("Should your password include special characters?");
+    upper = confirm("Would you like your passord to include uppercase letters?");
+    lower = confirm("Would you like your passord to include lowercase letters?");
+    number = confirm("Would you like your passord to include numbers?");
+    symbols = confirm("Would you like your passord to include special characters?");
   }
   const resultEl = document.getElementById('password');
 
