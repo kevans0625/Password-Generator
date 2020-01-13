@@ -23,7 +23,21 @@ window.addEventListener('load', function() {
   document.getElementById('generate').addEventListener('click', () => {
     resultEl.value = generatePassword(lower, upper, number, symbols, length);
   });
+  document.getElementById('clipboard').addEventListener('click', () => {
+    const textarea = document.createElement('textarea');
+    const password = resultEl.value;
 
+    if (!password) {
+      return;
+    }
+
+    textarea.value = password;
+    document.body.appendChild(textarea);
+    textarea.select();
+    document.execCommand('copy');
+    textarea.remove();
+    alert('Password copied to clipboard');
+  });
 
 
   const randomFunc = {
